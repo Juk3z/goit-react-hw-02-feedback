@@ -1,5 +1,5 @@
 import { Component } from 'react';
-
+import styles from './styles.module.css';
 import PropTypes from 'prop-types';
 
 class FeedbackOptions extends Component {
@@ -18,7 +18,11 @@ class FeedbackOptions extends Component {
     return (
       <>
         {buttonNames.map(item => (
-          <button key={this.generateId()} onClick={onLeaveFeedback}>
+          <button
+            className={styles.btn}
+            key={this.generateId()}
+            onClick={onLeaveFeedback}
+          >
             {item}
           </button>
         ))}
